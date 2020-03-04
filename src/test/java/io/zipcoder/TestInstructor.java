@@ -1,5 +1,10 @@
-package io.zipcoder.interfaces;
+package io.zipcoder;
 
+import io.zipcoder.Instructor;
+import io.zipcoder.Person;
+import io.zipcoder.Student;
+import io.zipcoder.interfaces.Learner;
+import io.zipcoder.interfaces.Teacher;
 import org.junit.Assert;
 import org.junit.Test;
 

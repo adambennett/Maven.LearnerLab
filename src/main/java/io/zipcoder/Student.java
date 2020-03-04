@@ -1,4 +1,6 @@
-package io.zipcoder.interfaces;
+package io.zipcoder;
+
+import io.zipcoder.interfaces.Learner;
 
 public class Student extends Person implements Learner {
 

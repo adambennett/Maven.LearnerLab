@@ -1,21 +1,20 @@
-package io.zipcoder.interfaces;
+package io.zipcoder;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer;
 
-public class People<E> implements Iterable<E> {
+public abstract class People<E extends Person> implements Iterable<E> {
 
-    private List<Person> personList = new ArrayList<>();
+    private List<E> personList = new ArrayList<>();
 
-    public void add(Person person) {
+    public void add(E person) {
         personList.add(person);
     }
 
-    public Person findById(long id) {
-        for (Person p : personList) {
+    public E findById(long id) {
+        for (E p : personList) {
             if (p.getId() == id) {
                 return p;
             }
@@ -48,15 +47,7 @@ public class People<E> implements Iterable<E> {
         return personList.size();
     }
 
-    public Person[] toArray() {
-        Person[] people = new Person[personList.size()];
-        int i = 0;
-        for (Person p : personList) {
-            people[i] = p;
-            i++;
-        }
-        return people;
-    }
+    public abstract E[] toArray();
 
     public Iterator<E> iterator() {
         Iterator<E> iterationer = new Iterator()
