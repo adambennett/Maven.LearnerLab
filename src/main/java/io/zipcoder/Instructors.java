@@ -2,7 +2,7 @@ package io.zipcoder;
 
 import java.util.Iterator;
 
-public class Instructors extends People<Instructor> {
+public final class Instructors extends People<Instructor> {
 
     private static Instructors INSTANCE;
 
